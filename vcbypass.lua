@@ -37,3 +37,11 @@ Bypass.Toggle("Auto Unban", false, function(Bool)
 end)
 
 Bypass.Label("Made by Keozog on Discord.")
+
+while task.wait(1) do
+	if vci.VoiceChatState ~= Enum.VoiceChatState.Joined and vci.VoiceChatState ~= Enum.VoiceChatState.Joining then
+		if AutoBypass then
+			VoiceChatService:joinVoice()
+		end
+	end
+end
